@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=campground.title%></title>
+</head>
+<body>
+    <h1>Explore <%= campground.title%></h1>
+
+    <h2>Location: <%= campground.location %></h2>
+
+    <a href="/campgrounds/<%=campground._id%>/edit">Edit</a>
+
+    <form method="post" action="/campgrounds/<%=campground._id%>?_method=DELETE">
+        <button>Delete <%=campground.title%></button>
+    </form>
+
+    <a href="/campgrounds">Back to main index</a>
+
+
+</body>
+</html>
