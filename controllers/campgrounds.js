@@ -55,7 +55,7 @@ module.exports.editCampground = async (req, res) => {
     editedCampground.images.push(...images);
     await editedCampground.save();
     if (req.body.deleteImages) {
-        for(let filename of req.body.deletImages){
+        for(let filename of req.body.deleteImages){
             await cloudinary.uploader.destroy(filename);
         }
         await editedCampground.updateOne({$pull: {images: {filename: {$in: req.body.deleteImages}}}})
