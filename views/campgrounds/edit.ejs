@@ -6,7 +6,7 @@
     <div class="row">
         <h1 class="text-center">Edit Campground</h1>
         <div class="col-6 offset-3">
-               <form method="post" action="/campgrounds/<%=campground._id%>?_method=PUT" novalidate class="validated-form">
+               <form method="post" action="/campgrounds/<%=campground._id%>?_method=PUT" novalidate class="validated-form" enctype="multipart/form-data">
         <div class="mb-3">
         <label class="form-label" for="title">Campground name:</label>
         <input class="form-control" name="campground[title]" id="title" type="text" value="<%=campground.title%>" required/>
@@ -22,13 +22,10 @@
           </div>
     </div>
     
-    <div class="mb-3">
-        <label class="form-label" for="image">Image URL:</label>
-        <input class="form-control" name="campground[image]" id="image" type="text" value="<%=campground.image%>" required/>
-        <div class="valid-feedback">
-            Looks Good!
-          </div>
-    </div>
+    <!-- <div class="mb-3">
+        <label class="form-label" for="image">Add Images</label>
+        <input type="file" name="image" id="image" multiple>
+    </div> -->
     <div class="mb-3">
         <label class="form-label" for="price">Campground Price per night:</label>
     <div class="input-group ">
@@ -46,9 +43,22 @@
             Looks Good!
           </div>
     </div>
+    <div class="mb-3 custom-file">
+        <label for="image" class="form-label custom-file-label">Add More Images:</label>
+        <input class="form-control" type="file" id="image" name="image" multiple>
+      </div>
+      <div class="mb-3">
+        <% campground.images.forEach(function(img, i) { %>
+            <img src="<%= img.url %>" class="img-thumbnail">
+            <div class="form-check-inline">
+                <input type="checkbox" id="img-<%= i %>" name="deleteImages[]" value="<%=img.filename%>">
+            </div>
+            <label for="img-<%= i %>">Delete?</label>
+            <% }) %>
+      </div>
 
     <div class="mb-3">
-        <button class="btn btn-success">Submit Edits to Campground</button>
+        <button class="btn btn-success">Update Campground</button>
     </div>
     </form>
     <a href="/campgrounds">Cancel Edits</a>
