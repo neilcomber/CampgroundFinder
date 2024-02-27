@@ -24,21 +24,23 @@ const seedDB = async ()=>{
         const priceRandom = Math.floor(Math.random() * 100)
         
         const camp = new Campground({
+            //Should be your user id:
             author: '65bb6f4e71bf4e0b068397cd',
             title: `${sample(descriptors)} ${sample(places)}`,
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             images: [
                 {
-                  url: 'https://res.cloudinary.com/dqpr4hpfv/image/upload/v1708067036/YelpCamp/zsuj5ssjwrgapphz8upl.png',
-                  filename: 'YelpCamp/zsuj5ssjwrgapphz8upl',
-                },
-                {
-                  url: 'https://res.cloudinary.com/dqpr4hpfv/image/upload/v1708067039/YelpCamp/ziium46jvpabslsweukl.png',
-                  filename: 'YelpCamp/ziium46jvpabslsweukl',
-                }
+                    url: 'https://res.cloudinary.com/dqpr4hpfv/image/upload/v1709030116/YelpCamp/qjvt8lt50aur7g0rdhzw.jpg',
+                    filename: 'YelpCamp/qjvt8lt50aur7g0rdhzw',
+                  },
+              
               ],
-            description: 'Here is a lovely camping ground full of fish & chips', 
-            price: priceRandom
+            description: 'Here is a lovely camping ground with wonderful walks and nice scenery, and a good coffee stall', 
+            price: priceRandom, 
+            geometry: { 
+                type: 'Point', 
+                coordinates: [ 0.229434, 51.136151 ] 
+            }
         })
         await camp.save();
     }
