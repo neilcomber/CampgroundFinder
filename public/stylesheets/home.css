@@ -1,7 +1,18 @@
 body {
     height: 100vh;
-}
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url("https://etias.com/assets/uploads/imagery/blog/camping-in-europe.jpg");
+    background-size: cover;
+    background-position: center;
 
 .cover-container {
     max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255.0.5);
+    margin-left: 1rem;
+    color: white;
 }
