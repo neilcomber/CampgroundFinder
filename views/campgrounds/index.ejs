@@ -9,9 +9,9 @@
                     <div class="col-md-4">
                         <a href="/campgrounds/<%=campground._id%>">
                         <% if (campground.images && campground.images.length > 0 && campground.images[0].url) { %>
-                            <img src="<%=campground.images[0].url%>" alt="" class="img-fluid">
+                            <img src="<%=campground.images[0].url%>" alt="" class="img-fluid" crossorigin="anonymous">
                       <%  }else { %>
-                        <img src="https://res.cloudinary.com/dqpr4hpfv/image/upload/v1708409038/YelpCamp/yzpdx9wfaghsxxc6fzvj.png" alt="" class="img-fluid">
+                        <img src="https://res.cloudinary.com/dqpr4hpfv/image/upload/v1708409038/YelpCamp/yzpdx9wfaghsxxc6fzvj.png" alt="" class="img-fluid" crossorigin="anonymous">
                         <% } %>
                     </a>
                     </div>
