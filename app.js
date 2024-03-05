@@ -21,11 +21,13 @@ const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/user');
 const User = require('./models/user');
 const helmet = require('helmet');
-// const dbUrl = process.env.DB_URL;
+
+const MongoDBStore = require('connect-mongo');
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelp-camp';
 
 //'mongodb://127.0.0.1:27017/yelp-camp' - my internal database
 
-mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp')
+mongoose.connect(dbUrl)
 .then(()=>{
     console.log('connected to database')
 })
@@ -46,9 +48,23 @@ app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize());
 
+const secret = process.env.SECRET || 'thisshouldbeabettersecret';
+
+const store = MongoDBStore.create({
+    mongoUrl: dbUrl, 
+    crypto: {
+        secret
+    }, 
+    touchAfter: 24 * 60 * 60
+});
+
+store.on("error", function (e) {
+    console.log('session store error', e)
+})
 
 const sessionConfig = {
-    secret: 'thisshouldbeabettersecret', 
+    store,
+    secret, 
     resave: false, 
     saveUninitialized: true, 
     cookie: {
