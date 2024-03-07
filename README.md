@@ -4,7 +4,7 @@
 ### A full Restful CRUD app. Written with Javascript, Node, EJS & Bootstrap 5
 
 ## Use the fully deployed app here:
-https://calm-brushlands-46394-e1d01a55864f.herokuapp.com/campgrounds
+https://calm-brushlands-46394-e1d01a55864f.herokuapp.com
 
 ## Some Key Technologies used: 
 
