@@ -32,6 +32,6 @@ https://calm-brushlands-46394-e1d01a55864f.herokuapp.com
 - Map on index page needs adjusting to work better on mobiles.
 - Home screen nav bar does not currently have burger functionality on mobiles.
 
-A Video on Sanitiation within the app:
+### A Video on Sanitiation within the app:
 
 [![Sanitization in the app](https://i.imgur.com/YP39gZ6.png)](https://youtu.be/bNMaoKBlC1I)
