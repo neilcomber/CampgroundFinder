@@ -8,7 +8,7 @@ https://calm-brushlands-46394-e1d01a55864f.herokuapp.com
 
 ## A Video Walkthrough:
 
-[![Campground Finder walkthrough](<blockquote class="imgur-embed-pub" lang="en" data-id="a/s8Nr3GA"  ><a href="//imgur.com/a/s8Nr3GA">dsfsdsf</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)](https://youtu.be/cQnpg28Pq1c)
+[![Campground Finder walkthrough](https://i.imgur.com/s8Nr3GA.png))](https://youtu.be/cQnpg28Pq1c)
 
 
 
