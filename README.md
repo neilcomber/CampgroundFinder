@@ -6,7 +6,12 @@
 ## Use the fully deployed app here:
 https://calm-brushlands-46394-e1d01a55864f.herokuapp.com
 
+## A Video Walkthrough:
+[![Campground Finder walkthrough](https://i.imgur.com/ARSem5hm.png)](https://youtu.be/k9N7xA1inLY)  
+
 ## Some Key Technologies used: 
+
+[![Profile video](https://imgur.com/a/jcf3Is4)](https://youtu.be/cQnpg28Pq1c)
 
 - MongoDB, MongoDB Atlas for deploying
 - Mongoose
