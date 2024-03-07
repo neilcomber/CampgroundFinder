@@ -34,4 +34,4 @@ https://calm-brushlands-46394-e1d01a55864f.herokuapp.com
 
 A Video on Sanitiation within the app:
 
-https://youtu.be/bNMaoKBlC1I
+[![Sanitization in the app](https://i.imgur.com/YP39gZ6.png)](https://youtu.be/bNMaoKBlC1I)
