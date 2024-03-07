@@ -23,3 +23,7 @@ https://calm-brushlands-46394-e1d01a55864f.herokuapp.com
 - Add functionaity to book campsites directly through website
 - Map on index page needs adjusting to work better on mobiles.
 - Home screen nav bar does not currently have burger functionality on mobiles.
+
+A Video on Sanitiation within the app:
+
+https://youtu.be/bNMaoKBlC1I
